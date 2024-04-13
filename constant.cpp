@@ -202,8 +202,7 @@ void alphabets_pattern(int r)
     {
         for (int j = i; j >= 1; j--)
         {
-            std::cout << std::setw(2) << char('A' + (j - 1) % 26);
-            ;
+            std::cout << std::setw(2) << char('A' + (j - 1) % 26); 
         }
         for (int j = 1; j <= 2 * (r - i); j++)
         {
@@ -212,7 +211,6 @@ void alphabets_pattern(int r)
         for (int j = 1; j <= i; j++)
         {
             std::cout << std::setw(2) << char('A' + (j - 1) % 26);
-            ;
         }
         std::cout << std::endl;
     }
