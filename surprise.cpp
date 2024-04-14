@@ -5,13 +5,9 @@
 #include <windows.h>
 #include "functions.h"
 
-int main()
-{
-    surprise_screen();
-}
-
 void surprise_screen(void)
 {
+    system("cls");
     char c;
     int choice, rows;
     while (1)
@@ -52,14 +48,15 @@ void surprise_screen(void)
         }
         if (c == 'W')
         {
-            exit(0);
-        } //{start_screen();}
+            {start_screen();}
+        } 
         std::cout << "Press any character key to continue:";
         std::cin >> c;
     }
 }
 void butterfly(int r)
 {
+    system("cls");
     for (int i = 0; i < r; i++)
     {
         for (int j = 0; j <= i; j++)
@@ -122,9 +119,11 @@ void butterfly(int r)
         }
         std::cout << std::endl;
     }
+    std::cin.get();
 }
 void christmas_tree(int r)
 {
+    system("cls");
     for (int i = 0; i < r; i++)
     {
         for (int j = 0; j < r - i - 1; j++)
@@ -149,9 +148,11 @@ void christmas_tree(int r)
         }
         std::cout << std::endl;
     }
+    std::cin.get();
 }
 void heart(int r)
 {
+    system("cls");
     for (int i = r / 2; i <= r; i += 2)
     {
         for (int j = 1; j < r - i; j += 2)
@@ -184,9 +185,11 @@ void heart(int r)
         }
         std::cout << std::endl;
     }
+    std::cin.get();
 }
 void mountain_range(int r)
 {
+    system("cls");
     for (int i = 0; i < r; i++)
     {
         for (int j = 0; j < r - i - 1; j++)
@@ -216,4 +219,5 @@ void mountain_range(int r)
 
         std::cout << std::endl;
     }
+    std::cin.get();
 }

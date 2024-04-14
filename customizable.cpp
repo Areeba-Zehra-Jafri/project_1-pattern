@@ -4,13 +4,9 @@
 #include <iomanip>
 #include "functions.h"
 
-int main()
-{
-    customizable_screen();
-}
-
 void customizable_screen(void)
 {
+    system("cls");
     char move, c, ch;
     int count = 0, choice, rows;
     std::cout << "Enter D to move forward and A to move backward S to select and W to go back " << std::endl;
@@ -31,8 +27,8 @@ void customizable_screen(void)
         }
         if (move == 'W')
         {
-            exit(0);
-        } //{start_screen();}
+            {start_screen();}
+        } 
         switch (count)
         {
         case 0:
@@ -57,6 +53,7 @@ void customizable_screen(void)
         }
         std::cin >> move;
     }
+    system("cls");
     std::cout << "Enter the number of pattern you wanted:" << std::endl;
     std::cin >> choice;
     std::cout << "Enter the number of rows you want in the output:" << std::endl;
@@ -99,6 +96,7 @@ void customizable_screen(void)
 }
 void pyramid(int r, char c, char ch)
 {
+    system("cls");
     if (isValidInput(c, ch))
     {
         std::cout << "Invalid input" << std::endl;
@@ -125,9 +123,11 @@ void pyramid(int r, char c, char ch)
         }
         std::cout << std::endl;
     }
+    std::cin.get();
 }
 void rectangle(int r, char c, char ch)
 {
+    system("cls");
     if (isValidInput(c, ch))
     {
         std::cout << "Invalid input" << std::endl;
@@ -150,9 +150,11 @@ void rectangle(int r, char c, char ch)
         }
         std::cout << std::endl;
     }
+    std::cin.get();
 }
 void diamond(int r, char c, char ch)
 {
+    system("cls");
     if (isValidInput(c, ch))
     {
         std::cout << "Invalid input" << std::endl;
@@ -200,9 +202,11 @@ void diamond(int r, char c, char ch)
         }
         std::cout << std::endl;
     }
+    std::cin.get();
 }
 void hourglass(int r, char c, char ch)
 {
+    system("cls");
     if (isValidInput(c, ch))
     {
         std::cout << "Invalid input" << std::endl;
@@ -249,6 +253,7 @@ void hourglass(int r, char c, char ch)
         }
         std::cout << std::endl;
     }
+    std::cin.get();
 }
 
 bool isValidInput(char c, char ch)

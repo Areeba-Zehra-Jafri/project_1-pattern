@@ -1,16 +1,20 @@
 #include<iostream>
 #include<cstdlib>
 #include<fstream>
+#include<windows.h>
 #include "functions.h"
+
 
 void welcome_screen(void)
 {
+    system("cls");
     char login;
     std::cout<<"Pattern Project:"<<std::endl;
-    std::cout<<"Enter S/s tostart and E/e to exit"<<std::endl;
+    std::cout<<"Enter S/s to start and E/e to exit"<<std::endl;
     std::cin>>login;
     if(login=='S'||login=='s')
     {
+        system("cls");
         password_screen();
     }
     else if(login=='E'||login=='e')
@@ -22,10 +26,12 @@ void welcome_screen(void)
         std::cout<<"Invalid input"<<std::endl;
         welcome_screen();
     }
+    std::cin.get();
 }
 
 void main_screen(void)
 {
+    system("cls");
     int choice;
     while(1)
     {
@@ -45,7 +51,6 @@ void main_screen(void)
             instructions();
             break;
         case 3:
-            std::cout<<"exit"<<std::endl;
             std::exit(0);
             break;
         case 4:
@@ -56,10 +61,12 @@ void main_screen(void)
             break;
         }
     }
+    std::cin.get();
 }
 
 void start_screen(void)
 {
+    system("cls");
     int choice;
     while(1)
     {
@@ -90,10 +97,12 @@ void start_screen(void)
             break;
         }
     }
+    std::cin.get();
 }
 
 void instructions(void)
 {
+    system("cls");
     std::string line;
     std::ifstream in;
     in.open("instructions.txt");
@@ -106,3 +115,5 @@ void instructions(void)
     std::cin.get();
     std::cin.get();
 }
+
+

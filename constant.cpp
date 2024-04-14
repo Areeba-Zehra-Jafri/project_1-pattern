@@ -5,13 +5,14 @@
 #include <algorithm>
 #include "functions.h"
 
-int main()
-{
-    constants_screen();
-}
+// int main()
+// {
+//     constants_screen();
+// }
 
 void constants_screen(void)
 {
+    system("cls");
     char c;
     int count = 0, choice, rows;
     std::cout << "Enter D to move forward and A to move backward S to select and W to go back " << std::endl;
@@ -32,8 +33,9 @@ void constants_screen(void)
         }
         if (c == 'W')
         {
-            exit(0);
-        } //{start_screen();}
+            start_screen();
+        }
+        
         switch (count)
         {
         case 0:
@@ -104,6 +106,7 @@ void constants_screen(void)
 }
 void pascal_triangle(int r)
 {
+    system("cls");
     int coef = 1;
     for (int i = 0; i < r; i++)
     {
@@ -125,6 +128,7 @@ void pascal_triangle(int r)
 }
 void floyd_triangle(int r)
 {
+    system("cls");
     int count = 0;
     for (int i = 0; i < r; i++)
     {
@@ -139,6 +143,7 @@ void floyd_triangle(int r)
 }
 void palindrome_pyramid(int r)
 {
+    system("cls");
     for (int i = 1; i <= r; i++)
     {
         for (int j = 1; j <= 2 * (r - i); j++)
@@ -159,6 +164,7 @@ void palindrome_pyramid(int r)
 }
 void number_pyramid(int r)
 {
+    system("cls");
     for (int i = 1; i <= r; i++)
     {
         for (int j = 0; j <= (r - i) * 2; j++)
@@ -179,6 +185,7 @@ void number_pyramid(int r)
 }
 void number_square(int r)
 {
+    system("cls");
     for (int i = 0; i < 2 * r - 1; i++)
     {
         // Step 2: Focus on the number of columns: 2*n - 1 columns
@@ -198,6 +205,7 @@ void number_square(int r)
 }
 void alphabets_pattern(int r)
 {
+    system("cls");
     for (int i = r; i >= 1; i--)
     {
         for (int j = i; j >= 1; j--)
