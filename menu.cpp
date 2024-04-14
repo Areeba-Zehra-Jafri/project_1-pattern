@@ -23,11 +23,7 @@ void welcome_screen(void)
         welcome_screen();
     }
 }
-void password_screen(void)
-{
-    std::cout<<"Password Screen"<<std::endl;
-    main_screen();
-}
+
 void main_screen(void)
 {
     int choice;

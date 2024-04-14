@@ -37,27 +37,27 @@ void constants_screen(void)
         switch (count)
         {
         case 0:
-            std::cout << "pascal's triangle" << count << std::endl;
+            std::cout << "pascal's triangle: " << count << std::endl;
             pascal_triangle(5);
             break;
         case 1:
-            std::cout << "Floyd's triangle" << count << std::endl;
+            std::cout << "Floyd's triangle: " << count << std::endl;
             floyd_triangle(5);
             break;
         case 2:
-            std::cout << "number pyramid 1" << count << std::endl;
+            std::cout << "number pyramid 1: " << count << std::endl;
             palindrome_pyramid(5);
             break;
         case 3:
-            std::cout << "number pyramid 2" << count << std::endl;
+            std::cout << "number pyramid 2: " << count << std::endl;
             number_pyramid(5);
             break;
         case 4:
-            std::cout << "Alphabet's pattern" << count << std::endl;
+            std::cout << "Alphabet's pattern: " << count << std::endl;
             alphabets_pattern(5);
             break;
         case 5:
-            std::cout << "number square" << count << std::endl;
+            std::cout << "number square: " << count << std::endl;
             number_square(5);
             break;
         default:
